@@ -63,7 +63,7 @@ jobs:
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
       BBG: ${{ inputs.BBG }}
-      supp_op: false  # 直接使用默认值，解决未定义问题
+      supp_op: ${{ inputs.supp_op }}
   get-ksu-manager:
     if: ${{ inputs.get_manager }}
     uses: ./.github/workflows/get-manager.yml
